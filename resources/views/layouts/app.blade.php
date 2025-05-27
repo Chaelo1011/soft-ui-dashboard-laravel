@@ -10,8 +10,6 @@
 * Coded by Creative Tim
 
 =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 -->
 <!DOCTYPE html>
 
@@ -22,10 +20,6 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  @if (env('IS_DEMO'))
-      <x-demo-metas></x-demo-metas>
-  @endif
 
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
@@ -38,7 +32,34 @@
   <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
   <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- Font Awesome Icons -->
-  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../assets/css/fontawesome.min.css">
+  <link rel="stylesheet" href="../assets/css/solid.min.css">
+
+  <style>
+    /* Asegurarse de que las fuentes se carguen correctamente */
+    @font-face {
+      font-family: 'Font Awesome 6 Free';
+      font-style: normal;
+      font-weight: 900;
+      font-display: block;
+      src: url("../assets/fonts/fa-solid-900.woff2") format("woff2");
+    }
+    @font-face {
+      font-family: 'Font Awesome 6 Brands';
+      font-style: normal;
+      font-weight: 400;
+      font-display: block;
+      src: url("../assets/fonts/fa-brands-400.woff2") format("woff2");
+    }
+    @font-face {
+      font-family: 'Font Awesome 6 Free';
+      font-style: normal;
+      font-weight: 400;
+      font-display: block;
+      src: url("../assets/fonts/fa-regular-400.woff2") format("woff2");
+    }
+  </style>
+
   <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
   <link id="pagestyle" href="../assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
@@ -67,7 +88,6 @@
   <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
   <script src="../assets/js/plugins/fullcalendar.min.js"></script>
   <script src="../assets/js/plugins/chartjs.min.js"></script>
-  @stack('rtl')
   @stack('dashboard')
   <script>
     var win = navigator.platform.indexOf('Win') > -1;
