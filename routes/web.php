@@ -56,6 +56,6 @@ Route::group(['middleware' => 'guest'], function () {
 	Route::post('/reset-password', [ChangePasswordController::class, 'changePassword'])->name('password.update');
 });
 
-// Route::get('/login', function () {
-//     return view('session/login-session');
-// })->name('login');
+Route::get('/login', function () {
+    return view('session/login-session');
+})->name('login');
